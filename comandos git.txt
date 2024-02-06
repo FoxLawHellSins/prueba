@@ -1,0 +1,26 @@
+local:
+git init : inicia repo
+git status: muestra el estado actual del repo
+git add : agrega cosas /. (agrega todo) / .exe(se pueden elegir el tipo de archivo)
+git commit: crea el checkpoint con texto / -m ""
+git log: te muestra los commits / -- oneline / -p (+info) / --graph / --all / --decorate
+git branch: (te muestra las ramas existentes) / nombrebranch (ahí crea una nueva branch con el nombre)
+git checkout: cambia de rama /nombredelabranch (hacia la rama selñeccionada) /-b nombre (lo crea y lo traslada automaticamente) / - (al ultimo visitado)
+git merge: (se usa desde la rama a la que queres traer la otra rama) fuciona tu rama actual con otra rama y crea un nuevo commit con ambas ramas y los cambios hechos en embas (puede generar ciertos errores si alguien crea o elimina arcvhivos) (un error comun, al momento de pushear un compa pusheó antes que vos, entonces git )
+git diff: vez la diferencia entre el ultimo commit y pc / --cached (diferencia entre stage y commit) / hash1 hash2 / rama1 rama2
+git revert hash: funciona para traer antiguas caracteristicas al nuevo comit que se creará (deshace los cambios "diff" de un commit antiguo)
+git cherry-pick hash: manda un commit que yo seleccione de mi rama que estoy usando a una rama seleccionada sin cerrar o modificar el ultimo commit que hice en esa rama (sirve para cuando alguien solucionó el error en una rama y commitea la solucion al error pero no cierra la rama para sefuir trabajando en ella(hotfix))
+
+
+PELIGRO PELIGRO PELIGRO:
+git rebase nombreRama: borra la rama seleccionada y crea un nuevo commit en la rama en la que tenes el head, fucionando las dos ramas y creando un nuevo commit (como merge pero borra la rama)
+git reset hash --hard (borra todos los commits que se hiciera luego del commit seleccionado)/ soft
+
+
+Servidor:
+git clone nombreUrl: clona un repositorio de 0 (implica cargar todos los archivos)
+git pull nombreRepo nombreRama: actualiza el repo Ej: tu compa manda un archivo pero yo lo cloné antes, entonces hago pull (y no descarga todo de 0, ahorrando datos)
+git push: pushea en el repo creado (solo si esta creado el repo con los comandos que te indica git)/ -u nombreRepo nombreRama (si lo pusheas por primera vez usas este)
+git fetch: te aviza si hay cosas nuevas en el server 
+
+
